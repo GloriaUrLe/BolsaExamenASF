@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolsaExamenASF", "BolsaExamenASF\BolsaExamenASF.csproj", "{B6E5C826-32E6-47C3-BFCB-58E46AD3B209}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{B524D36D-092C-4061-909D-675AF2281C3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{6C321A77-DBFB-4E32-8E57-22F4556F1D59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6E5C826-32E6-47C3-BFCB-58E46AD3B209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E5C826-32E6-47C3-BFCB-58E46AD3B209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E5C826-32E6-47C3-BFCB-58E46AD3B209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E5C826-32E6-47C3-BFCB-58E46AD3B209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B524D36D-092C-4061-909D-675AF2281C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B524D36D-092C-4061-909D-675AF2281C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B524D36D-092C-4061-909D-675AF2281C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B524D36D-092C-4061-909D-675AF2281C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C321A77-DBFB-4E32-8E57-22F4556F1D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C321A77-DBFB-4E32-8E57-22F4556F1D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C321A77-DBFB-4E32-8E57-22F4556F1D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C321A77-DBFB-4E32-8E57-22F4556F1D59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA525476-B18B-4BC8-8CE6-21FE3AFE8151}
+	EndGlobalSection
+EndGlobal
