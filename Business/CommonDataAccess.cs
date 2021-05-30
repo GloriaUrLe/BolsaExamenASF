@@ -56,7 +56,7 @@ namespace Business
         }
         public virtual void Add(ref SqlCommand _cmd)
         {
-            using (DataBaseLayer.Rutines oData = new DataBaseLayer.Rutines())
+            using (Rutines oData = new Rutines())
             {
                 oData.ConnectionString = _strConexionString;
                 oData.ExecuteStoreProcedure(ref _cmd);
@@ -66,7 +66,7 @@ namespace Business
         }
         public virtual void Delete(ref SqlCommand _cmd)
         {
-            using (DataBaseLayer.Rutines oData = new DataBaseLayer.Rutines())
+            using (Rutines oData = new Rutines())
             {
                 oData.ConnectionString = _strConexionString;
                 oData.ExecuteStoreProcedure(ref _cmd);
@@ -77,7 +77,7 @@ namespace Business
         }
         public virtual void Modify(ref SqlCommand _cmd)
         {
-            using (DataBaseLayer.Rutines oData = new DataBaseLayer.Rutines())
+            using (Rutines oData = new Rutines())
             {
                 oData.ConnectionString = _strConexionString;
                 oData.ExecuteStoreProcedure(ref _cmd);
