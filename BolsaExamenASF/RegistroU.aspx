@@ -7,9 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Usuario</title>
     <script src="Scripts/jquery-3.6.0.js"></script>
-    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/additional-methods.min.js"></script>
+    <script src="Scripts/extendsvalidate.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <script src="js/RegU.js"></script>
 </head>
 <body>
 
@@ -55,7 +59,16 @@
                     <div class="row">
                         <label for="Pass" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Password</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control input-group-sm" id="Pass" placeholder="Password" minlength="8" maxlength="12" required="required" />
+                            <input type="password" class="form-control input-group-sm" id="Pass" name="Pass" placeholder="Password" minlength="8" maxlength="12" required="required" />
+
+                        </div>
+
+                    </div>
+                     <div class="row col-form-label "></div>
+                    <div class="row">
+                        <label for="PassConfirm" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Confirmar Password</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control input-group-sm" id="PassConfirm" name="PassConfirm" placeholder="Password" minlength="8" maxlength="8" required="required" />
 
                         </div>
 
@@ -65,7 +78,7 @@
                     <div class="row">
                         <label for="Email" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Email</label>
                         <div class="col-sm-8">
-                            <input type="email" class="form-control" id="Email" placeholder="Email" required="required"/>
+                            <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required="required"/>
 
                         </div>
 

@@ -1,0 +1,156 @@
+﻿body {
+}
+#field {
+    margin-left: .5em;
+    float: left
+}
+
+
+br {
+    clear: both
+}
+
+input {
+    border: 1px solid #000;
+    margin-bottom: .5em
+}
+
+    input.error {
+        border: 1px solid red
+    }
+
+label.error {
+    background: url(images/unchecked.gif) no-repeat;
+    padding-left: 16px;
+    margin-left: .3em
+}
+
+label.valid {
+    background: url(images/checked.gif) no-repeat;
+    display: block;
+    width: 16px;
+    height: 16px
+}
+form.SecUsr {
+    width: 370px;
+    font-size: 1.0em;
+    color: #333;
+}
+
+    form.SecUsr legend {
+        padding-left: 0;
+    }
+
+    form.SecUsr legend, form.SecUsr label {
+        color: #333;
+    }
+
+    form.SecUsr fieldset {
+        border: none;
+        border-top: 1px solid #C9DCA6;
+        background: url(images/cmxform-fieldset.gif) left bottom repeat-x;
+        background-color: #F8FDEF;
+    }
+
+        form.SecUsr fieldset fieldset {
+            background: none;
+        }
+
+        form.SecUsr fieldset p, form.SecUsr fieldset fieldset {
+            padding: 5px 10px 7px;
+            background: url(images/cmxform-divider.gif) left bottom repeat-x;
+        }
+    form.SecUsr input {
+        border: 1px solid #000;
+        margin-bottom: .5em
+    }
+
+        form.SecUsr input.error {
+            border: 1px solid red
+        }
+div.error {
+    display: none;
+}
+
+input {
+    border: 1px solid black;
+}
+
+    input.checkbox {
+        border: none
+    }
+
+    input:focus {
+        border: 1px dotted black;
+    }
+
+    input.error {
+        border: 1px dotted red;
+    }
+
+form.SecUsr .gray * {
+    color: gray;
+}
+/*Datos Personales*/
+form.SecDP {
+    width: 370px;
+    font-size: 1.0em;
+    color: #333;
+}
+
+    form.SecDP legend {
+        padding-left: 0;
+    }
+
+    form.SecDP legend, form.SecUsr label {
+        color: #333;
+    }
+
+    form.SecDP fieldset {
+        border: none;
+        border-top: 1px solid #C9DCA6;
+        background: url(images/cmxform-fieldset.gif) left bottom repeat-x;
+        background-color: #F8FDEF;
+    }
+
+        form.SecDP fieldset fieldset {
+            background: none;
+        }
+
+        form.SecDP fieldset p, form.SecUsr fieldset fieldset {
+            padding: 5px 10px 7px;
+            background: url(images/cmxform-divider.gif) left bottom repeat-x;
+        }
+
+    form.SecDP input {
+        border: 1px solid #000;
+        margin-bottom: .5em
+    }
+
+        form.SecDP input.error {
+            border: 1px solid red
+        }
+
+div.error {
+    display: none;
+}
+
+input {
+    border: 1px solid black;
+}
+
+    input.checkbox {
+        border: none
+    }
+
+    input:focus {
+        border: 1px dotted black;
+    }
+
+    input.error {
+        border: 1px dotted red;
+    }
+
+form.SecDP .gray * {
+    color: gray;
+}

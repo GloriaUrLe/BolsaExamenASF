@@ -7,9 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Experiencia Laboral</title>
     <script src="Scripts/jquery-3.6.0.js"></script>
-    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/additional-methods.min.js"></script>
+    <script src="Scripts/extendsvalidate.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <script src="js/RegEL.js"></script>
 </head>
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">

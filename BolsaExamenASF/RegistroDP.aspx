@@ -7,9 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Datos Personales</title>
     <script src="Scripts/jquery-3.6.0.js"></script>
-    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/additional-methods.min.js"></script>
+    <script src="Scripts/extendsvalidate.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />    
+    <script src="js/RegDP.js"></script>
+    <link href="CSS/styles.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -45,14 +49,14 @@
                     <div class="row">
                         <label for="Nombre" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Nombre</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control input-group-sm" id="Nombre" placeholder="Nombre" minlength="3" maxlength="250" required="required"/>
+                            <input type="text" class="form-control input-group-sm" id="Nombre" name="Nombre" placeholder="Nombre" minlength="3" maxlength="250" required="required"/>
                         </div>
                     </div>
                     <div class="row col-form-label "></div>
                     <div class="row">
                         <label for="APaterno" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Apellido Paterno</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control input-group-sm" id="APaterno" placeholder="Apellido Paterno" minlength="3" maxlength="250" required="required" />
+                            <input type="text" class="form-control input-group-sm" id="APaterno" name="APaterno" placeholder="Apellido Paterno" minlength="3" maxlength="250" required="required" />
                         </div>
 
                     </div>
@@ -60,19 +64,19 @@
                     <div class="row">
                         <label for="AMaterno" class="col-sm-2 col-form-label text-sm-end">Apellido Materno</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control input-group-sm" id="AMaterno" placeholder="Apellido Materno"/>
+                            <input type="text" class="form-control input-group-sm" id="AMaterno" name="AMaterno" placeholder="Apellido Materno"/>
                         </div>
                     </div>
                     <div class="row col-form-label "></div>
                     <div class="row">
                         <label for="ciudad" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Ciudad</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="ciudad" placeholder="Ciudad" minlength="3" maxlength="250" required="required" />
+                            <input type="text" class="form-control input-group-sm" id="ciudad" name="ciudad" placeholder="Ciudad" minlength="3" maxlength="250" required="required" />
 
                         </div>
                         <label for="calle" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Calle</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="calle" placeholder="Calle" minlength="3" maxlength="250" required="required" />
+                            <input type="text" class="form-control input-group-sm" id="calle" name="calle" placeholder="Calle" minlength="3" maxlength="250" required="required" />
 
                         </div>
 
@@ -81,12 +85,12 @@
                     <div class="row">
                         <label for="num" class="col-sm-2 col-form-label text-sm-end">Número</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="num" placeholder="Número" />
+                            <input type="text" class="form-control input-group-sm" id="num" name="num" placeholder="Número" />
 
                         </div>
                         <label for="colonia" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Colonia</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="colonia" placeholder="Colonia" minlength="3" maxlength="250" required="required" />
+                            <input type="text" class="form-control input-group-sm" id="colonia" name="colonia" placeholder="Colonia" minlength="3" maxlength="250" required="required" />
 
                         </div>
 
@@ -95,12 +99,12 @@
                     <div class="row">
                         <label for="municipio" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Municipio</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="municipio" placeholder="Municipio"  minlength="3" maxlength="250" required="required"/>
+                            <input type="text" class="form-control input-group-sm" id="municipio" name="municipio" placeholder="Municipio"  minlength="3" maxlength="250" required="required"/>
 
                         </div>
                         <label for="edo" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Estado</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="edo" placeholder="Estado" minlength="3" maxlength="250" required="required" />
+                            <input type="text" class="form-control input-group-sm" id="edo" name="edo" placeholder="Estado" minlength="3" maxlength="250" required="required" />
 
                         </div>
 
@@ -110,12 +114,12 @@
                     <div class="row">
                         <label for="telefono" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Telefono</label>
                         <div class="col-sm-3">
-                            <input type="tel" class="form-control input-group-sm" id="telefono" placeholder="Telefono"  minlength="10" maxlength="10" required="required"/>
+                            <input type="tel" class="form-control input-group-sm" id="telefono" name="telefono" placeholder="Telefono"  minlength="10" maxlength="10" required="required"/>
 
                         </div>
                         <label for="tel2" class="col-sm-2 col-form-label text-sm-end">Celular</label>
                         <div class="col-sm-3">
-                            <input type="tel" class="form-control input-group-sm" id="tel2" placeholder="Celular"/>
+                            <input type="tel" class="form-control input-group-sm" id="tel2" name="tel2" placeholder="Celular"/>
 
                         </div>
 
@@ -124,12 +128,12 @@
                     <div class="row">
                         <label for="fechaNac" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Fecha de Nacimiento</label>
                         <div class="col-sm-3">
-                            <input type="date" class="form-control input-group-sm" id="fechaNac" required="required"/>
+                            <input type="date" class="form-control input-group-sm" id="fechaNac" name="fechaNac" required="required"/>
 
                         </div>
                         <label for="curp" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>CURP</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="curp" placeholder="CURP"  minlength="18" maxlength="18" required="required"/>
+                            <input type="text" class="form-control input-group-sm" id="curp" name="curp" placeholder="CURP"  minlength="18" maxlength="18" required="required"/>
 
                         </div>
 
@@ -138,12 +142,12 @@
                     <div class="row">
                         <label for="rfc" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>RFC</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="rfc" placeholder="RFC"  minlength="13" maxlength="13" required="required" />
+                            <input type="text" class="form-control input-group-sm" id="rfc" name="rfc" placeholder="RFC"  minlength="13" maxlength="13" required="required" />
 
                         </div>
                         <label for="pasaporte" class="col-sm-2 col-form-label text-sm-end">Pasaporte</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control input-group-sm" id="pasaporte" placeholder="Pasaporte" />
+                            <input type="text" class="form-control input-group-sm" id="pasaporte" name="pasaporte" placeholder="Pasaporte" />
 
                         </div>
 
