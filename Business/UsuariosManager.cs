@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Business
 {
@@ -23,6 +24,7 @@ namespace Business
 
         public void Add(Usuarios _Usuarios)
         {
+
             SqlCommand cmd = new SqlCommand();
             SqlParameter param = new SqlParameter();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -63,6 +65,7 @@ namespace Business
             cmd.Parameters.Add(param);
 
             base.Add(ref cmd);
+            _Usuarios.Llave_Usuario =  long.Parse(cmd.Parameters["@IdCurrent"].Value.ToString());
         }
         public void Delete(Usuarios _Usuarios, string _Criterio)
         {
@@ -178,6 +181,42 @@ namespace Business
             System.IO.StreamWriter xmlSW = new System.IO.StreamWriter(@_Path + "Usuarios.xml");
             dsTbm_Layouts.WriteXml(xmlSW, XmlWriteMode.IgnoreSchema);
             xmlSW.Close();
+        }
+        public string GetXmlDataSet()
+        {
+
+            DataSet dsCatalogoreportesManager = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter("stp_get_Usuarios", _strConexionString);
+
+            adapter.Fill(dsCatalogoreportesManager, "Row");
+
+            MemoryStream str = new MemoryStream();
+            dsCatalogoreportesManager.WriteXml(str, XmlWriteMode.WriteSchema);
+            str.Seek(0, SeekOrigin.Begin);
+            StreamReader sr = new StreamReader(str);
+            string xmlstr;
+            xmlstr = sr.ReadToEnd();
+            return (xmlstr);
+        }
+        public string GetXmlDataSetFilteredById(string idsSelected)
+        {
+            string where = " where Usuarios.LLAVE_USUARIO in (" + idsSelected + ")";
+            DataSet dsCatalogoreportesManager = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Usuarios.LLAVE_USUARIO,Usuarios.USUARIO,Usuarios.PASS,Usuarios.EMAIL,Usuarios.FECHA_ALTA FROM Usuarios " + where, _strConexionString);
+
+
+
+            adapter.Fill(dsCatalogoreportesManager, "Row");
+
+
+
+            MemoryStream str = new MemoryStream();
+            dsCatalogoreportesManager.WriteXml(str, XmlWriteMode.IgnoreSchema);
+            str.Seek(0, SeekOrigin.Begin);
+            StreamReader sr = new StreamReader(str);
+            string xmlstr;
+            xmlstr = sr.ReadToEnd();
+            return (xmlstr);
         }
     }
 }

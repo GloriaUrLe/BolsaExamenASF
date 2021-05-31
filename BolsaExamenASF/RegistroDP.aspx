@@ -12,8 +12,8 @@
     <script src="Scripts/extendsvalidate.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />    
-    <script src="js/RegDP.js"></script>
     <link href="CSS/styles.css" rel="stylesheet" />
+    <script src="js/RegDP.js"></script>
 </head>
 <body>
 
@@ -40,8 +40,8 @@
             </div>
         </div>
     </nav>
-    <form id="SecDP" method="get">
-        <div class="container">
+    <form id="SecDP" method="post" action="RegistroEL.aspx">
+        <div class="container form-container">
             <div class=" form-control modal-content">
                 <div class="modal-body row">
                     <div class="row col-form-label "><span>Los campos marcados con <span style="color:red">*</span> son requeridos</span></div>
@@ -119,7 +119,7 @@
                         </div>
                         <label for="tel2" class="col-sm-2 col-form-label text-sm-end">Celular</label>
                         <div class="col-sm-3">
-                            <input type="tel" class="form-control input-group-sm" id="tel2" name="tel2" placeholder="Celular"/>
+                            <input type="tel" class="form-control input-group-sm" id="tel2" name="tel2" placeholder="Celular" minlength="10" maxlength="10"/>
 
                         </div>
 
@@ -152,7 +152,20 @@
                         </div>
 
                     </div>
+                        <div class="row col-form-label "></div>
+                    <div class="row">
+                        <label for="cartilla" class="col-sm-2 col-form-label text-sm-end">Cartilla</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control input-group-sm" id="cartilla" name="cartilla" placeholder="Cartilla"/>
 
+                        </div>
+                        <label for="edoCivil" class="col-sm-2 col-form-label text-sm-end">Estado Civil</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control input-group-sm" id="edoCivil" name="edoCivil" placeholder="Estado Civil" />
+
+                        </div>
+
+                    </div>
                     <div class="row col-form-label "></div>
 
                     <div class="row">
@@ -191,7 +204,8 @@
 
                         </div>
                     </div>
-
+                    <input type="hidden" id="idU" name="idU" value="17"/>
+                    <input type="hidden" id="idDp" name="idDp" value="1"/>
                 </div>
             </div>
         </div>

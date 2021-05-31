@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BolsaExamenASF.webservices.Proceso" CodeBehind="Proceso.svc.cs" %>

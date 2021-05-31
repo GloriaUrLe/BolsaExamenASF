@@ -39,8 +39,8 @@
             </div>
         </div>
     </nav>
-    <form id="SecEL" method="get">
-        <div class="container">
+    <form id="SecEL" method="post" action="Consulta.aspx">
+        <div class="container form-container">
             <div class=" form-control modal-content">
                 <div class="modal-body row">
                     <div class="row col-form-label "><span>Los campos marcados con <span style="color:red">*</span> son requeridos</span></div>
@@ -68,6 +68,15 @@
                         <label for="empresa" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Empresa</label>
                         <div class="col-sm-8">
                             <input class="form-control input-group-sm" id="empresa" name="empresa" placeholder="Empresa"  minlength="3" maxlength="250" required="required"/>
+
+                        </div>
+
+                    </div>
+                    <div class="row col-form-label "></div>
+                    <div class="row">
+                        <label for="noEmp" class="col-sm-2 col-form-label text-sm-end">Numero de Empleado</label>
+                        <div class="col-sm-8">
+                            <input class="form-control input-group-sm" id="noEmp" name="noEmp" placeholder="Numero de Empleado"  minlength="3" maxlength="250" required="required"/>
 
                         </div>
 
@@ -117,7 +126,9 @@
                                 <button type="submit" class="btn btn-primary" id="btnGExpL">Continuar</button>
                             </div>
                             <div class="col-sm-2"></div>
-
+                            <input type="hidden" id="idU" name="idU" value="17"/>
+                            <input type="hidden" id="idExL" name="idExL"  value="1"/>
+                            <input type="hidden" id="idDp" name="idDp" value="3" />
                         </div>
                     </div>
                 </div>

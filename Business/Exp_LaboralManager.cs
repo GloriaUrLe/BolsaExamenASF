@@ -29,6 +29,12 @@ namespace Business
             cmd.CommandText = "stp_Ins_Exp_Laboral";
 
             param = new SqlParameter();
+            param.ParameterName = "@IdCurrent";
+            param.SqlDbType = SqlDbType.BigInt;
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            param = new SqlParameter();
             param.ParameterName = "@LLAVE_USUARIO";
             param.SqlDbType = SqlDbType.BigInt;
             param.Value = _Exp_Laboral.Llave_Usuario;
@@ -113,6 +119,7 @@ namespace Business
             cmd.Parameters.Add(param);
 
             base.Add(ref cmd);
+            _Exp_Laboral.Llave_Exp_Lab = long.Parse(cmd.Parameters["@IdCurrent"].Value.ToString());
         }
         public void Delete(Exp_Laboral _Exp_Laboral, string _Criterio)
         {

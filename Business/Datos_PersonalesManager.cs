@@ -29,6 +29,12 @@ namespace Business
             cmd.CommandText = "stp_Ins_Datos_Personales";
 
             param = new SqlParameter();
+            param.ParameterName = "@IdCurrent";
+            param.SqlDbType = SqlDbType.BigInt;
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            param = new SqlParameter();
             param.ParameterName = "@LLAVE_USUARIO";
             param.SqlDbType = SqlDbType.BigInt;
             param.Value = _Datos_Personales.Llave_Usuario;
@@ -169,6 +175,7 @@ namespace Business
             cmd.Parameters.Add(param);
 
             base.Add(ref cmd);
+            _Datos_Personales.Llave_Dato_Personal = long.Parse(cmd.Parameters["@IdCurrent"].Value.ToString());
         }
         public void Delete(Datos_Personales _Datos_Personales, string _Criterio)
         {

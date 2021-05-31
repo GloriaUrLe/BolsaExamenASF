@@ -41,8 +41,9 @@
         </div>
     </nav>
 
-    <form id="SecUsr" method="get">
-        <div class="container">
+    <form id="SecUsr" method="post" action="RegistroDP.aspx" >
+        
+        <div class="container form-container">
             <div class=" form-control modal-content">
                 <div class="modal-body row">
                     <div class="row col-form-label "><span>Los campos marcados con <span style="color:red">*</span> son requeridos</span></div>
@@ -59,7 +60,7 @@
                     <div class="row">
                         <label for="Pass" class="col-sm-2 col-form-label text-sm-end"><span style="color:red">*</span>Password</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control input-group-sm" id="Pass" name="Pass" placeholder="Password" minlength="8" maxlength="12" required="required" />
+                            <input type="password" class="form-control input-group-sm" id="Pass" name="Pass" placeholder="Password" minlength="8" maxlength="8" required="required" />
 
                         </div>
 
@@ -97,6 +98,7 @@
                 </div>
             </div>
         </div>
+        <input type="hidden" id="idU" name="idU" />
     </form>
 </body>
 </html>

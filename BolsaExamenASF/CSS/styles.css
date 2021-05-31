@@ -154,3 +154,79 @@ input {
 form.SecDP .gray * {
     color: gray;
 }
+.navbar {
+    box-sizing: border-box;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e3e2e2;
+    box-shadow: 0 3px 7px 0 rgba(110, 112, 114, 0.21);
+}
+
+.form-container {
+    padding-top: 100px;
+}
+.error-message {
+    color: red;
+    padding-top:40px;
+}
+
+.table-area {
+    position: relative;
+    z-index: 0;
+    margin-top: 50px;
+}
+
+
+
+table.responsive-table {
+    display: table;
+    /* required for table-layout to be used (not normally necessary; included for completeness) */
+    table-layout: fixed;
+    /* this keeps your columns with fixed with exactly the right width */
+    width: 100%;
+    /* table must have width set for fixed layout to work as expected */
+    height: 100%;
+}
+
+
+
+    table.responsive-table thead {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 3em;
+        background: #eee;
+        table-layout: fixed;
+        display: table;
+    }
+
+
+
+    table.responsive-table th {
+        background: #eee;
+    }
+
+
+
+    table.responsive-table td {
+        line-height: 2em;
+    }
+
+
+
+    table.responsive-table tr > td,
+    table.responsive-table th {
+        text-align: left;
+    }
+.no-visible {
+    display: none;
+    visibility: hidden;
+}
